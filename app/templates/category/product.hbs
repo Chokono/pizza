@@ -1,1 +1,9 @@
-<h1>{{this.model.product_name}}</h1>
+{{#each this.model as |product|}}
+  <h3 class="itemH3">{{product.category}}</h3>
+  <ItemDemonstration @item={{product}} />
+{{/each}}
+
+<div class="addBlock">
+	<button class="add button">Add to pizza</button>
+	<button class="remove button">Remove from pizza</button>
+</div>

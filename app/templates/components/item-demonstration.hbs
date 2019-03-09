@@ -1,16 +1,15 @@
-<article>
-  <h3>{{item.title}}</h3>
-  <img src={{item.image}} alt="">
-  <div class="detail pay">
-    <span>Price:</span> {{item.owner}}
+<div class="imgBox">
+  <img src={{this.item.img}} alt="">
+</div>
+<div class="descriptionBox">
+  <div class="itemMain">
+    <h6 class="itemName">{{this.item.name}}</h6>
+    <p class="itemInfo">price: <span>{{category-price-callories-calculator this.item 'price'}}$</span></p>
+    <p class="itemInfo">calories: <span>{{category-price-callories-calculator this.item 'calories'}} kcal</span></p>
   </div>
-  <div class="detail type">
-    <span>Type:</span> {{rental.category}}
+  <div class="itemDescription">
+    <h6 class="itemName">Description</h6>
+    <p class="itemInfo">{{this.item.description}}</p>
   </div>
-  <div class="detail location">
-    <span>Location:</span> {{rental.city}}
-  </div>
-  <div class="detail bedrooms">
-    <span>Number of bedrooms:</span> {{rental.bedrooms}}
-  </div>
-</article>
+</div>
+<div class="clear" />

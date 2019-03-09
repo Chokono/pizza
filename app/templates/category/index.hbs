@@ -1,1 +1,19 @@
-<h1>{{this.model}}</h1>
+{{#each this.model as |category|}}
+
+  <h3 class="itemH3">{{category.name}}</h3>
+  <ItemDemonstration @item={{category}} />
+
+  <h3 class="productH3">Products:</h3>
+  <div class="listContainer">
+    {{#each category.items as |product|}}
+      {{#link-to "category.product" product_name class=product.id}}
+        <ProductList @item={{product}} />
+      {{/link-to}}
+    {{/each}}
+  </div>
+{{/each}}
+
+
+
+
+<div class="cliar"></div>

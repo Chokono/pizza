@@ -5,3 +5,91 @@ body {
 	font-size: 36px;
 	text-align: center;
 }
+.imgBox img {
+	width: 200px;
+	float: left;
+}
+.descriptionBox {
+	width: calc(100% - 200px);
+	float: left;
+}
+.itemMain {
+	float: left;
+	width: 30%;
+	box-sizing: border-box;
+	padding-left: 20px;
+}
+.itemDescription {
+	float: left;
+	width: 70%;
+	box-sizing: border-box;
+	padding-left: 20px;
+}
+.itemName {
+	text-transform: capitalize;
+	font-size: 20px;
+	font-weight: bold;
+	margin: 0 0 10px;
+}
+.itemInfo {
+	font-size: 18px;
+	line-height: 22px;
+	margin: 5px 0;
+}
+.itemInfo span {
+	font-size: 20px;
+	color: #4d4906;
+}
+.clear {
+	clear: both;
+}
+.itemH3 {
+	font-size: 50px;
+	text-transform: capitalize;
+}
+.listContainer {
+	text-align: center;
+}
+.listContainer .ember-view {
+	display: inline-block;
+	width: 20%;
+	min-width: 150px;
+	box-sizing: border-box;
+	padding: 0 10px;
+	margin: 10px 0;
+}
+.listContainer img {
+	width: 100%;
+}
+.productH3 {
+	text-align: center;
+	font-size: 36px;
+}
+.button {
+	display: inline-block;
+	width: 250px;
+	padding: 10px 0;
+	cursor: pointer;
+	box-shadow: 2px 2px 5px 0 black;
+	font-size: 20px;
+	margin: 10px;
+	background-color: #0e2cad;
+	color: white;
+}
+.button:hover {
+	background-color: #8d9fed;
+	color: black;
+}
+.button:focus {
+	outline: none;
+}
+.addBlock {
+	text-align: center;
+	margin-top: 100px;
+}
+.remove {
+	background-color: #8f0808;
+}
+.remove:hover {
+	background-color: #cf322c;
+}
