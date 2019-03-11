@@ -5,6 +5,7 @@ export default Route.extend({
     this.category_name = params.resolvedModels["ingredients.category"].category_name;
   },
   model() {
+  	console.log('category_name = ',this.category_name);
     return this.store.query('category', {category_name: this.category_name});
   }
 });

@@ -36,13 +36,13 @@ export default function() {
     type: 'category',
     id: 'error',
     attributes: {
-      name: 'Error',
+      name: false,
       description: 'This page is not found',
       img: '/assets/images/error.jpg',
       category: 'error',
       items: [{
         id: 'error',
-        name: 'error',
+        name: false,
         description: 'This page is not found',
         img: '/assets/images/error.jpg',
         price: 'error',
@@ -145,13 +145,13 @@ export default function() {
     }]
   }
   this.get('categories', function(db, request) {
-    let filteredCategories = categories.find((cat_ry) => cat_ry.attributes.name.toLowerCase().indexOf(request.queryParams.category_name.toLowerCase()) !== -1);
+    let filteredCategories = categories.find((cat_ry) => cat_ry.attributes.name.toLowerCase() === request.queryParams.category_name.toLowerCase());
     if (filteredCategories) {
       if (request.queryParams.product_name === undefined) {
         filteredCategories.attributes.items = products[request.queryParams.category_name.toLowerCase()].map(product=>(product.attributes));
         return { data: [filteredCategories] };
       } else {
-        let filtredProducts = products[request.queryParams.category_name.toLowerCase()].find((pro_ct) => pro_ct.attributes.name.toLowerCase().indexOf(request.queryParams.product_name.toLowerCase()) !== -1);
+        let filtredProducts = products[request.queryParams.category_name.toLowerCase()].find((pro_ct) => pro_ct.attributes.name.toLowerCase() === request.queryParams.product_name.toLowerCase());
         if (filtredProducts) {
           return { data: [filtredProducts] };
         }

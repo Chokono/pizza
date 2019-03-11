@@ -4,6 +4,7 @@ body {
 .mainTitle {
 	font-size: 36px;
 	text-align: center;
+	display: none;
 }
 .imgBox img {
 	width: 200px;

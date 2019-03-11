@@ -1,6 +1,6 @@
 {{#each this.model as |product|}}
-  <h3 class="itemH3">{{#link-to "ingredients.category" product.category}}{{product.category}}{{/link-to}}</h3>
-  <ItemDemonstration @item={{product}} />
-  <AddBlock @itemId={{product.id}} />
+  {{#let (if product.name "product-start" "error-page") as |comp|}}
+    {{component comp product=product}}
+  {{/let}}
 {{/each}}
 
