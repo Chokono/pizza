@@ -1,10 +1,4 @@
 <div>
   <h1 class="mainTitle">Velcome to kitchen</h1>
-  <h3>Create new pizza</h3>
-  <form action="/kitchen" type="GET">
-    {{#each this.model as |category|}}
-      <RadioParams @category={{category}} />
-    {{/each}}
-    <input type="submit" class="button" value="create pizza">
-  </form>
+  <KitchenForm @categories={{this.model}} />
 </div>

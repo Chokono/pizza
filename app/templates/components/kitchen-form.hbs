@@ -1,0 +1,9 @@
+<h3>Create new pizza</h3>
+<form action="/kitchen" type="GET">
+  {{#each categories as |category|}}
+    <RadioParams @category={{category}} />
+  {{/each}}
+  <input type="submit" class="button" onClick={{action "toggleRadioInput(isExist)"}} value="create pizza">
+</form>
+
+{{if this.pizza.isExist "Exist"}}
