@@ -1,20 +1,10 @@
 <div>
   <h1 class="mainTitle">Velcome to kitchen</h1>
   <h3>Create new pizza</h3>
-  <form action="/create">
-    <p>
-      size: <input type="radio" name="size" class="radio" checked value="small" id="small"> <label for="small">Small</label>
-      <input type="radio" name="size" class="radio" value="large" id="large"> <label for="large">Large</label>
-    </p>
-    <p>
-      stuffing: <input type="radio" name="stuffing" class="radio" checked value="cheese" id="cheese"> <label for="cheese">Cheese</label>
-      <input type="radio" name="stuffing" class="radio" value="salad" id="salad"> <label for="salad">Salad</label>
-      <input type="radio" name="stuffing" class="radio" value="potato" id="potato"> <label for="potato">Potato</label>
-    </p>
-    <p>
-      topping: <input type="radio" name="topping" class="radio" value="mayo" id="mayo"> <label for="mayo">Mayo</label>
-      <input type="radio" name="topping" class="radio" value="spice" id="spice"> <label for="spice">Spice</label>
-    </p>
-    <input type="submit" class="button" value="create">
+  <form action="/kitchen" type="GET">
+    {{#each this.model as |category|}}
+      <RadioParams @category={{category}} />
+    {{/each}}
+    <input type="submit" class="button" value="create pizza">
   </form>
 </div>

@@ -1,0 +1,9 @@
+<h1 class="mainTitle">See all the parameters of your pizza</h1>
+<h3>Categories:</h3>
+<div class="listContainer">
+  {{#each this.model as |category|}}
+    {{#link-to "ingredients.category" category.name}}
+      <ProductList @item={{category}} />
+    {{/link-to}}
+  {{/each}}
+</div>

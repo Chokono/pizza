@@ -10,8 +10,10 @@ Router.map(function() {
   this.route('about');
   this.route('kitchen');
   this.route('index');
-  this.route('category', { path: '/:category_name' }, function() {
-    this.route('product', { path: '/:product_name' });
+  this.route('ingredients', function() {
+    this.route('category', { path: '/:category_name' }, function() {
+      this.route('product', { path: '/:product_name' });
+    });
   });
 });
 

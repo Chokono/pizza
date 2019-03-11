@@ -6,7 +6,7 @@
   <h3 class="productH3">Products:</h3>
   <div class="listContainer">
     {{#each category.items as |product|}}
-      {{#link-to "category.product" product_name class=product.id}}
+      {{#link-to "ingredients.category.product" product.category product.name}}
         <ProductList @item={{product}} />
       {{/link-to}}
     {{/each}}

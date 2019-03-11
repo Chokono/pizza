@@ -1,7 +1,7 @@
 import { helper } from '@ember/component/helper';
 
-export function categoryPriceCalloriesCalculator(params/*, hash*/) {
-  if (params[0][params[1]]) {
+export function categoryPriceCalloriesCalculator(params) {
+  if (params[0][params[1]] || params[0][params[1]] === 0) {
     return params[0][params[1]];
   } else {
     let min = params[0].items[0][params[1]];

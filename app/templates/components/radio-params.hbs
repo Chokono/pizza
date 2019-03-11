@@ -1,0 +1,6 @@
+<p>
+  {{category.name}}:
+  {{#each category.items as |product|}}
+    <input type="radio" name={{category.name}} class="radio" value={{product.name}} id={{product.id}}> <label class="radioLabel" for={{product.id}}>{{product.name}}</label>
+  {{/each}}
+</p>

@@ -103,7 +103,7 @@ export default function() {
       attributes: {
         name: 'spice',
         description: 'spice description',
-        img: '/assets/images/spice',
+        img: '/assets/images/spice.jpg',
         price: 15,
         calories: 0,
         category: 'topping'
@@ -144,22 +144,44 @@ export default function() {
       }
     }]
   }
-  this.get('/categories', function(db, request) {
+  this.get('categories', function(db, request) {
     let filteredCategories = categories.find((cat_ry) => cat_ry.attributes.name.toLowerCase().indexOf(request.queryParams.category_name.toLowerCase()) !== -1);
     if (filteredCategories) {
       if (request.queryParams.product_name === undefined) {
         filteredCategories.attributes.items = products[request.queryParams.category_name.toLowerCase()].map(product=>(product.attributes));
-        console.log('filteredCategories = ',filteredCategories);
         return { data: [filteredCategories] };
       } else {
         let filtredProducts = products[request.queryParams.category_name.toLowerCase()].find((pro_ct) => pro_ct.attributes.name.toLowerCase().indexOf(request.queryParams.product_name.toLowerCase()) !== -1);
         if (filtredProducts) {
           return { data: [filtredProducts] };
-        } else {
-          
         }
       }
     }
     return { data: errorData };
-  });// return { data: rentals.find((rental) => request.params.id === rental.id) };
+  });
+  this.get('/kitchens', function() {
+    let kitchenInputs = categories.map(category=>({
+      type: 'kitchen',
+      id: category.id,
+      attributes: {
+        name: category.attributes.name,
+        items: products[category.attributes.name].map(product=>({
+          id: product.id,
+          name: product.attributes.name,
+        }))
+      }
+    }));
+    return {data: kitchenInputs}
+  });
+  this.get('/ingredients', function() {
+    let ingredientInputs = categories.map(category=>({
+      type: 'ingredient',
+      id: category.id,
+      attributes: {
+        name: category.attributes.name,
+        img: category.attributes.img
+      }
+    }));
+    return {data: ingredientInputs}
+  });
 }

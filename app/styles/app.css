@@ -93,3 +93,6 @@ body {
 .remove:hover {
 	background-color: #cf322c;
 }
+.radioLabel, .radio {
+	cursor: pointer;
+}
