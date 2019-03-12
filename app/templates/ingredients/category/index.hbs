@@ -1,11 +1,16 @@
-
+{{log this.model}}
 {{#each this.model as |category|}}
-  {{#let (if category.name "category-start" "error-page") as |comp|}}
-    {{component comp category=category}}
-  {{/let}}
+  <h3 class="itemH3">{{category.name}}</h3>
+  <ItemDemonstration @item={{category}} />
+
+  <h3 class="productH3">Products:</h3>
+  <div class="listContainer">
+    {{#each category.items as |product|}}
+      {{#link-to "ingredients.category.product" product.category product.name}}
+        <ProductList @item={{product}} />
+      {{/link-to}}
+    {{/each}}
+  </div>
 {{/each}}
-
-
-
 
 <div class="cliar"></div>

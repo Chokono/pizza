@@ -5,7 +5,6 @@ export default Component.extend({
   actions: {
     toggleRadioInput (e) {
       e.preventDefault();
-      console.log(this);
        this.set('pizza.isExist', true);
       //this.pizza.isExist = true;
       //this.pizza[vale] = true;

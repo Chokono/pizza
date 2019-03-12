@@ -32,25 +32,6 @@ export default function() {
       items: []
     }
   }];
-  let errorData = [{
-    type: 'category',
-    id: 'error',
-    attributes: {
-      name: false,
-      description: 'This page is not found',
-      img: '/assets/images/error.jpg',
-      category: 'error',
-      items: [{
-        id: 'error',
-        name: false,
-        description: 'This page is not found',
-        img: '/assets/images/error.jpg',
-        price: 'error',
-        calories: 'error',
-        category: 'error'
-      }]
-    }
-  }];
   let products = {
     size: [{
       id: 'small',
@@ -157,7 +138,7 @@ export default function() {
         }
       }
     }
-    return { data: errorData };
+    return { data: 'not found' };
   });
   this.get('/kitchens', function() {
     let kitchenInputs = categories.map(category=>({
