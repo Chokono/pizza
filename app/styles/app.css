@@ -97,3 +97,23 @@ body {
 .radioLabel, .radio {
 	cursor: pointer;
 }
+.modal {
+	position: fixed;
+	top: 30%;
+	left: 50%;
+	transform: translate(-50%, -30%);
+	padding: 30px;
+	max-width: 300px;
+	z-index: 101;
+	background-color: white;
+
+}
+.overlay {
+	position: fixed;
+	z-index: 100;
+	top: 0;
+	left:0;
+	bottom: 0;
+	right: 0;
+	background-color: rgba(0,0,0,0.7);
+}

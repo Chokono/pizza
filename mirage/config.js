@@ -149,6 +149,8 @@ export default function() {
         items: products[category.attributes.name].map(product=>({
           id: product.id,
           name: product.attributes.name,
+          price: product.attributes.price,
+          calories: product.attributes.calories,
         }))
       }
     }));
