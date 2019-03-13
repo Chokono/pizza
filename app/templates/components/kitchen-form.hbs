@@ -3,7 +3,7 @@
   {{#each categories as |category|}}
     <RadioParams @category={{category}} />
   {{/each}}
-  <input type="submit" class="button" onClick={{action "toggleRadioInput(isExist)"}} value="create pizza">
+  <input type="submit" class="button" onClick={{action "toggleRadioInput"}} value="create pizza">
 </form>
 
 {{if this.pizza.isExist "Exist"}}
