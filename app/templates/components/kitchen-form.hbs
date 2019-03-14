@@ -1,13 +1,13 @@
-{{#if this.pizza.isExist }}
-  <p>{{this.pizza.params.size}} pizza contains from stuffing:</p>
+{{#if pizza.exist }}
+  <p>{{pizza.size}} pizza contains from stuffing:</p>
   <ul>
-    {{#each this.pizza.params.stuffing as |stuffing|}}
+    {{#each pizza.stuffing as |stuffing|}}
       <li>{{stuffing}}</li>
     {{/each}}
   </ul>
   <p>and topping:</p>
   <ul>
-    {{#each this.pizza.params.topping as |topping|}}
+    {{#each pizza.topping as |topping|}}
       <li>{{topping}}</li>
     {{/each}}
   </ul>
@@ -15,12 +15,12 @@
 {{else}}
   <h3>Create new pizza</h3>
   {{#each categories as |category|}}
-    <RadioParams @category={{category}} @toggleRadioInput={{action "toggleRadioInput"}}/>
+    <RadioParams @category={{category}} @toggleRadioInput={{action "toggleRadioInput"}} @toggleCheckboxInput={{action "toggleCheckboxInput"}} @pizza={{pizza}} />
   {{/each}}
   <input type="submit" class="button" onClick={{action "toggleButtonCreate"}} value="create pizza">
 {{/if}}
 {{#if this.error }}
   <ModalMessage @close={{action "closeError"}} @message={{this.error}}/>
 {{/if}}
-<p>Prise: {{this.pizza.price}}$</p>
-<p>Calories: {{this.pizza.calories}}kcal</p>
+<p>Price: {{pizza.price}}$</p>
+<p>Calories: {{pizza.calories}}kcal</p>

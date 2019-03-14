@@ -125,6 +125,18 @@ export default function() {
       }
     }]
   }
+  let pizzas = [{
+    type: 'pizza',
+    id: 'pizza',
+    attributes: {
+      exist: false,
+      size: '',
+      stuffing: '',
+      topping: '',
+      price: 0,
+      calories: 0,
+    },
+  }];
   this.get('categories', function(db, request) {
     let filteredCategories = categories.find((cat_ry) => cat_ry.attributes.name.toLowerCase() === request.queryParams.category_name.toLowerCase());
     if (filteredCategories) {
@@ -154,7 +166,7 @@ export default function() {
         }))
       }
     }));
-    return {data: kitchenInputs}
+    return { data: kitchenInputs }
   });
   this.get('/ingredients', function() {
     let ingredientInputs = categories.map(category=>({
@@ -166,5 +178,32 @@ export default function() {
       }
     }));
     return {data: ingredientInputs}
+  });
+  this.get('/pizzas', function() {
+    return { data: pizzas };
+  });
+  this.get('/products', function() {
+    let allProducts = {
+      id: 'products',
+      type: 'product',
+      attributes: {
+        size: products.size.map(el=>({
+          name: el.attributes.name,
+          price: el.attributes.price,
+          calories: el.attributes.calories,
+        })),
+        stuffing: products.stuffing.map(el=>({
+          name: el.attributes.name,
+          price: el.attributes.price,
+          calories: el.attributes.calories,
+        })),
+        topping: products.topping.map(el=>({
+          name: el.attributes.name,
+          price: el.attributes.price,
+          calories: el.attributes.calories,
+        })),
+      }
+    }
+    return { data: allProducts };
   });
 }

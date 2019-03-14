@@ -1,4 +1,4 @@
-{{#each this.model as |category|}}
+{{#let this.model as |category|}}
   <h3 class="itemH3">{{category.name}}</h3>
   <ItemDemonstration @item={{category}} />
 
@@ -10,6 +10,6 @@
       {{/link-to}}
     {{/each}}
   </div>
-{{/each}}
+{{/let}}
 
 <div class="cliar"></div>

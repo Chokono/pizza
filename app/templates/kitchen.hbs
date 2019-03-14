@@ -1,4 +1,6 @@
-<div>
-  <h1 class="mainTitle">Velcome to kitchen</h1>
-  <KitchenForm @categories={{this.model}} />
-</div>
+{{#let (get this.model.pizzas "lastObject") (get this.model.products "firstObject") as |pizza products|}}
+  <div>
+    <h1 class="mainTitle">Velcome to kitchen</h1>
+    <KitchenForm @categories={{this.model.categories}} @pizzas={{this.model.pizzas}} @pizza={{pizza}} @products={{products}} />
+  </div>
+{{/let}}
