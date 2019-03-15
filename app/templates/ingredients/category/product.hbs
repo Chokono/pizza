@@ -1,9 +1,8 @@
-{{#let this.model.products (get this.model.pizza "lastObject") as |product pizza|}}
+{{#let this.model.product (get this.model.pizzas "lastObject") as |product pizza|}}
   <h3 class="itemH3">{{#link-to "ingredients.category" product.category}}{{product.category}}{{/link-to}}</h3>
   <ItemDemonstration @item={{product}} />
-{{log this.model}}
   {{#if (get pizza "exist")}}
-    <AddBlock @name={{product.name}} @actionOk={{action "addToPizza"}} @textOk="Add to pizza" @textCansel="Remove from Pizza" @pizza={{pizza}} />
+    <AddBlock @actionOk={{action "addToPizza"}} @actionCancel={{action "removeFromPizza"}} @classOk="add button" @classCancel="remove button" @textOk="Add to pizza" @textCancel="Remove from pizza" />
   {{else}}
     {{#link-to "kitchen" class="button"}}Start Cooking{{/link-to}}
   {{/if}}

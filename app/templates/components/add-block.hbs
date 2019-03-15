@@ -1,4 +1,8 @@
 <div class="addBlock">
-  <button class="add button" name={{name}} onClick={{actionOk}}>{{textOk}}</button>
-  <button class="remove button"></button>
+  {{#if textOk}}
+    <button class={{classOk}} onClick={{actionOk}}>{{textOk}}</button>
+  {{/if}}
+  {{#if textCancel}}
+    <button class={{classCancel}} onClick={{actionCancel}}>{{textCancel}}</button>
+  {{/if}}
 </div>

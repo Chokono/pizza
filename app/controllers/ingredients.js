@@ -2,9 +2,9 @@ import Controller from '@ember/controller';
 
 export default Controller.extend({
   actions: {
-    addToPizza(e) {
-      e.preventDefault();
+    actionOk(e) {
       console.log('add');
+      e.preventDefault();
     }
   }
 });

@@ -1,5 +1,6 @@
-
+<button onClick={{action "actionOk"}}>123</button>
 {{outlet}}
+
 <footer>
   {{#let (get this.model "lastObject") as |pizza|}}
     {{#if (get pizza "exist")}}
