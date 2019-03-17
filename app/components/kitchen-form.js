@@ -58,10 +58,12 @@ export default Component.extend({
     closeError () {
       this.set('error', '');
     },
-    resetPizzaParams () {
+    resetPizzaParams (e) {
+      e.preventDefault();
+      this.pizza.set('exist', false);
       this.pizza.set('size', '');
-      this.pizza.set('stuffing', []);
-      this.pizza.set('topping', []);
+      this.pizza.set('stuffing', '');
+      this.pizza.set('topping', '');
       this.pizza.set('price', 0);
       this.pizza.set('calories', 0);
     },

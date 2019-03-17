@@ -1,7 +1,9 @@
 {{#if pizza.exist }}
-  <p>{{pizza.size}} pizza contains from</p>
-  <p><strong>stuffing:</strong> {{pizza.stuffing}}</p>
-  <p><strong>and topping:</strong> {{pizza.topping}}</p>
+  <p>You coocking pizza</p>
+  <p><strong>Size:</strong> {{pizza.size}}</p>
+  <p><strong>Stuffing:</strong> {{pizza.stuffing}}</p>
+  <p><strong>Topping:</strong> {{pizza.topping}}</p>
+  <p>If you want change composition of your pizza, you can see ingredients {{#link-to "ingredients"}}here!{{/link-to}}</p>
   <button class="button" onClick={{action "resetPizzaParams"}}>Order Complete</button>
 {{else}}
   <h3>Create new pizza</h3>
