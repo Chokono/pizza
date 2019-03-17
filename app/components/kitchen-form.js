@@ -1,4 +1,5 @@
 import Component from '@ember/component';
+import { calculateParams } from 'ember-hamburher/helpers/calculate-params';
 
 export default Component.extend({
   tagName: 'form',
@@ -15,23 +16,6 @@ export default Component.extend({
     }
     return true;
   },
-  calculateParams({pizza, products, param}) {
-    let result = 0;
-    if (pizza.size) {
-      result += products.size.find(product=>(product.name === pizza.size))[param];
-    }
-    if (Array.isArray(pizza.stuffing)) {
-      pizza.stuffing.forEach(stuffing=>{
-        result += products.stuffing.find(product=>(product.name === stuffing))[param];
-      });
-    }
-    if (Array.isArray(pizza.topping)) {
-      pizza.topping.forEach(topping=>{
-        result += products.topping.find(product=>(product.name === topping))[param];
-      });
-	}
-    return result;
-  },
   actions: {
     toggleButtonCreate (e) {
       e.preventDefault();
@@ -45,8 +29,8 @@ export default Component.extend({
     toggleRadioInput (e) {
       if(this.pizza.size !== e.target.value) {
         this.pizza.set('size', e.target.value);
-        this.pizza.set('price', this.calculateParams({pizza:this.pizza, products: this.products, param: 'price'}));
-        this.pizza.set('calories', this.calculateParams({pizza:this.pizza, products: this.products, param: 'calories'}));
+        this.pizza.set('price', calculateParams({pizza:this.pizza, products: this.products, param: 'price'}));
+        this.pizza.set('calories', calculateParams({pizza:this.pizza, products: this.products, param: 'calories'}));
       }
     },
     toggleCheckboxInput (e) {
@@ -68,8 +52,8 @@ export default Component.extend({
           this.pizza.set(e.target.getAttribute('name'), this.pizza[e.target.getAttribute('name')].filter(ingredient=>(ingredient !== e.target.value)));
         }
       }
-      this.pizza.set('price', this.calculateParams({pizza:this.pizza, products: this.products, param: 'price'}));
-      this.pizza.set('calories', this.calculateParams({pizza:this.pizza, products: this.products, param: 'calories'}));
+      this.pizza.set('price', calculateParams({pizza:this.pizza, products: this.products, param: 'price'}));
+      this.pizza.set('calories', calculateParams({pizza:this.pizza, products: this.products, param: 'calories'}));
     },
     closeError () {
       this.set('error', '');

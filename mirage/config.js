@@ -130,9 +130,9 @@ export default function() {
     id: 'pizza',
     attributes: {
       exist: true,
-      size: '123',
-      stuffing: [],
-      topping: [],
+      size: 'small',
+      stuffing: 'cheese',
+      topping: 'mayo',
       price: 0,
       calories: 0,
     },

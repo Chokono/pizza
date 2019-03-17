@@ -1,4 +1,3 @@
-<button onClick={{action "actionOk"}}>123</button>
 {{outlet}}
 
 <footer>
@@ -7,8 +6,8 @@
       <div class="pizzaContains">
         <p>Pizza is cooked.</p>
         <p>Size: {{get pizza "size"}}</p>
-        <p>Stuffing: {{#each (get pizza "stuffing") as |stuffing|}}{{stuffing}}, {{/each}}</p>
-        <p>Topping: {{#each (get pizza "topping") as |topping|}}{{topping}}, {{/each}}</p>
+        <p>Stuffing: {{get pizza "stuffing"}}</p>
+        <p>Topping: {{get pizza "topping"}}</p>
         <p>Price: {{get pizza "price"}}$</p>
         <p>Calories: {{get pizza "calories"}}kcal</p>
       </div>
