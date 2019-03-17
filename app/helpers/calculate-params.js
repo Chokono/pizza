@@ -5,7 +5,9 @@ export function calculateParams({pizza, products, param}) {
   let result = 0;
   categories.forEach(cat=>{
     pizza[cat].split(', ').forEach(calculationProduct=>{
-      result += products[cat].find(product=>(product.name === calculationProduct))[param];
+      if(calculationProduct) {
+        result += products[cat].find(product=>(product.name === calculationProduct))[param];
+      }
     });
   })
   return result;

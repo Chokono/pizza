@@ -1,16 +1,7 @@
 {{#if pizza.exist }}
-  <p>{{pizza.size}} pizza contains from stuffing:</p>
-  <ul>
-    {{#each pizza.stuffing as |stuffing|}}
-      <li>{{stuffing}}</li>
-    {{/each}}
-  </ul>
-  <p>and topping:</p>
-  <ul>
-    {{#each pizza.topping as |topping|}}
-      <li>{{topping}}</li>
-    {{/each}}
-  </ul>
+  <p>{{pizza.size}} pizza contains from</p>
+  <p><strong>stuffing:</strong> {{pizza.stuffing}}</p>
+  <p><strong>and topping:</strong> {{pizza.topping}}</p>
   <button class="button" onClick={{action "resetPizzaParams"}}>Order Complete</button>
 {{else}}
   <h3>Create new pizza</h3>

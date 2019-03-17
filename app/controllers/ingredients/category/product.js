@@ -3,6 +3,7 @@ import { calculateParams } from 'ember-hamburher/helpers/calculate-params';
 
 export default Controller.extend({
   error: '',
+  //isAddButton: (this.model.product.category === 'size') || (this.model.pizzas.objectAt(0)[this.model.product.category].indexOf(this.model.product.name) === -1) ? true : false,
   actions: {
     addToPizza() {
       if (this.model.product.category === 'size') {

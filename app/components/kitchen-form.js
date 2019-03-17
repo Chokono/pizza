@@ -5,13 +5,13 @@ export default Component.extend({
   tagName: 'form',
   error: '',
   validate (model) {
-    if (model.size === undefined) {
+    if (!model.size) {
       throw new Error ('choose size of pizza');
     }
-    if (model.stuffing.length < 1) {
+    if (!model.stuffing) {
       throw new Error ('add any stuffing to pizza');
     }
-    if (model.topping.length < 1) {
+    if (!model.topping) {
       throw new Error ('add any topping to pizza');
     }
     return true;
@@ -34,22 +34,22 @@ export default Component.extend({
       }
     },
     toggleCheckboxInput (e) {
+      let value = this.pizza[e.target.getAttribute('name')].split(', ');
       if (e.target.checked) {
-        if (this.pizza[e.target.getAttribute('name')].indexOf(e.target.value) === -1) {
-          let arr = [];
-          if(Array.isArray(this.pizza[e.target.getAttribute('name')])) {
-            arr = this.pizza[e.target.getAttribute('name')];
+        if (value.indexOf(e.target.value) === -1) {
+          if (this.pizza[e.target.getAttribute('name')]) {
+            this.pizza.set(e.target.getAttribute('name'), `${this.pizza[e.target.getAttribute('name')]}, ${e.target.value}`);
+          } else {
+            this.pizza.set(e.target.getAttribute('name'), e.target.value);
           }
-          arr.push(e.target.value);
-          this.pizza.set(e.target.getAttribute('name'), arr);
         } else {
           this.set('error', 'Don\'t do this, cheater!\n This checkbox is checked.');
         }
       } else {
-        if (this.pizza[e.target.getAttribute('name')].indexOf(e.target.value) === -1) {
+        if (value.indexOf(e.target.value) === -1) {
           this.set('error', 'Don\'t do this, cheater!\n This checkbox is not checked.');
         } else {
-          this.pizza.set(e.target.getAttribute('name'), this.pizza[e.target.getAttribute('name')].filter(ingredient=>(ingredient !== e.target.value)));
+          this.pizza.set(e.target.getAttribute('name'), value.filter(el=>(el !== e.target.value)).join(', '));
         }
       }
       this.pizza.set('price', calculateParams({pizza:this.pizza, products: this.products, param: 'price'}));

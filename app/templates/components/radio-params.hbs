@@ -1,7 +1,7 @@
 <p>
   {{category.name}}:
   {{#each category.items as |product|}}
-    {{#if (equal category.name 'size')}}
+    {{#if (equal category.name "size")}}
       <input type="radio" checked={{equal pizza.size product.name}} name={{category.name}} class="radio" price={{product.price}} calories={{product.calories}} value={{product.name}} onClick={{toggleRadioInput}}>
       <label class="radioLabel" for={{product.id}}>{{product.name}}</label>
     {{else}}
