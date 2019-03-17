@@ -72,7 +72,7 @@ export default function() {
       type: 'category',
       attributes: {
         name: 'mayo',
-        description: 'mayo description',
+        description: 'Mayo description',
         img: '/assets/images/mayo.jpg',
         price: 20,
         calories: 5,
@@ -83,10 +83,43 @@ export default function() {
       type: 'category',
       attributes: {
         name: 'spice',
-        description: 'spice description',
+        description: 'Spice description',
         img: '/assets/images/spice.jpg',
         price: 15,
         calories: 0,
+        category: 'topping'
+      }
+    },{
+      id: 'ketchup',
+      type: 'category',
+      attributes: {
+        name: 'ketchup',
+        description: 'Ketchup description',
+        img: '/assets/images/ketchup.jpg',
+        price: 10,
+        calories: 5,
+        category: 'topping'
+      }
+    },{
+      id: 'mustard',
+      type: 'category',
+      attributes: {
+        name: 'mustard',
+        description: 'Mustard description',
+        img: '/assets/images/mustard.jpg',
+        price: 9,
+        calories: 5,
+        category: 'topping'
+      }
+    },{
+      id: 'soySauce',
+      type: 'category',
+      attributes: {
+        name: 'soy sauce',
+        description: 'Soy sauce description',
+        img: '/assets/images/soySauce.jpg',
+        price: 5,
+        calories: 2,
         category: 'topping'
       }
     }],
@@ -95,7 +128,7 @@ export default function() {
       type: 'category',
       attributes: {
         name: 'cheese',
-        description: 'cheese description',
+        description: 'Cheese description',
         img: '/assets/images/cheese.jpg',
         price: 10,
         calories: 20,
@@ -106,10 +139,54 @@ export default function() {
       type: 'category',
       attributes: {
         name: 'salad',
-        description: 'salad description',
+        description: 'Salad description',
         img: '/assets/images/salad.jpg',
         price: 20,
         calories: 5,
+        category: 'stuffing'
+      }
+    }, {
+      id: 'tomato',
+      type: 'category',
+      attributes: {
+        name: 'tomato',
+        description: 'Potato description',
+        img: '/assets/images/tomato.jpg',
+        price: 15,
+        calories: 10,
+        category: 'stuffing'
+      }
+    }, {
+      id: 'mushrooms',
+      type: 'category',
+      attributes: {
+        name: 'mushrooms',
+        description: 'Mushrooms description',
+        img: '/assets/images/mushroom.jpg',
+        price: 20,
+        calories: 15,
+        category: 'stuffing'
+      }
+    }, {
+      id: 'sausage',
+      type: 'category',
+      attributes: {
+        name: 'sausage',
+        description: 'Sausage description',
+        img: '/assets/images/sausage.jpg',
+        price: 15,
+        calories: 25,
+        category: 'stuffing'
+      }
+    }, {
+      id: 'bacon',
+      type: 'category',
+      attributes: {
+        name: 'bacon',
+        description: 'Bacon description',
+        img: '/assets/images/bacon.jpg',
+        price: 20,
+        calories: 15,
         category: 'stuffing'
       }
     }, {
@@ -117,10 +194,43 @@ export default function() {
       type: 'category',
       attributes: {
         name: 'potato',
-        description: 'potato description',
+        description: 'Potato description',
         img: '/assets/images/potato.jpg',
-        price: 15,
+        price: 8,
         calories: 10,
+        category: 'stuffing'
+      }
+    }, {
+      id: 'pepper',
+      type: 'category',
+      attributes: {
+        name: 'pepper',
+        description: 'Pepper description',
+        img: '/assets/images/pepper.jpg',
+        price: 10,
+        calories: 3,
+        category: 'stuffing'
+      }
+    }, {
+      id: 'salmon',
+      type: 'category',
+      attributes: {
+        name: 'salmon',
+        description: 'Salmon description',
+        img: '/assets/images/salmon.jpg',
+        price: 30,
+        calories: 15,
+        category: 'stuffing'
+      }
+    }, {
+      id: 'onion',
+      type: 'category',
+      attributes: {
+        name: 'onion',
+        description: 'Onion description',
+        img: '/assets/images/onion.jpg',
+        price: 5,
+        calories: 1,
         category: 'stuffing'
       }
     }]

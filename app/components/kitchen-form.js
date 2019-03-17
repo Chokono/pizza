@@ -10,9 +10,13 @@ export default Component.extend({
     }
     if (!model.stuffing) {
       throw new Error ('add any stuffing to pizza');
+    } else if (model.stuffing.split(', ').length > 5) {
+      throw new Error (`Sorry, you can't cooked pizza with wore than 5 stuffing.`);
     }
     if (!model.topping) {
       throw new Error ('add any topping to pizza');
+    } else if (model.topping.split(', ').length > 5) {
+      throw new Error (`Sorry, you can't cooked pizza with wore than 5 topping.`);
     }
     return true;
   },
