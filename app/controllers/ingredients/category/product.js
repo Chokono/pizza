@@ -14,7 +14,7 @@ export default Controller.extend({
         }
       } else {
         if(this.model.pizzas.objectAt(0)[this.model.product.category].split(', ').length === 5) {
-          this.set('error', `Sorry, you can\'t cooked pizza with wore than 5 ${this.model.product.category}.`);
+          this.set('error', `Sorry, you can't cooked pizza with wore than 5 ${this.model.product.category}.`);
           return;
         }
         this.model.pizzas.objectAt(0).set(this.model.product.category, `${this.model.pizzas.objectAt(0)[this.model.product.category]}, ${this.model.product.name}`);
@@ -25,7 +25,7 @@ export default Controller.extend({
     removeFromPizza() {
       let arr = this.model.pizzas.objectAt(0)[this.model.product.category].split(', ');
       if(arr.length === 1) {
-        this.set('error', `Sorry, you can\'t cooked pizza without ${this.model.product.category}.`);
+        this.set('error', `Sorry, you can't cooked pizza without ${this.model.product.category}.`);
         return;
       }
       this.model.pizzas.objectAt(0).set(this.model.product.category, arr.filter(el=>(el !== this.model.product.name)).join(', '));

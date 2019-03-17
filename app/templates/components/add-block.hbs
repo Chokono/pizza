@@ -1,8 +1,11 @@
 <div class="addBlock">
-  {{#if textOk}}
-    <button class={{classOk}} onClick={{actionOk}}>{{textOk}}</button>
-  {{/if}}
-  {{#if textCancel}}
+  {{#if (if-and (equal product.category "size") (equal (get pizza product.category) product.name))}}
+    <br>
+  {{else if (equal product.category "size")}}
+    <button class={{classOk}} onClick={{actionOk}}>Change pizza size</button>
+  {{else if (is-in-array (get pizza product.category) product.name)}}
     <button class={{classCancel}} onClick={{actionCancel}}>{{textCancel}}</button>
+  {{else}}
+    <button class={{classOk}} onClick={{actionOk}}>{{textOk}}</button>
   {{/if}}
 </div>

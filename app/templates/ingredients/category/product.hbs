@@ -2,7 +2,7 @@
   <h3 class="itemH3">{{#link-to "ingredients.category" product.category}}{{product.category}}{{/link-to}}</h3>
   <ItemDemonstration @item={{product}} />
   {{#if (get pizza "exist")}}
-    <AddBlock @actionOk={{action "addToPizza"}} @actionCancel={{action "removeFromPizza"}} @classOk="add button" @classCancel="remove button" @textOk="Add to pizza" @textCancel="Remove from pizza" @isAddButton={{this.isAddButton}} />
+    <AddBlock @product={{product}} @pizza={{pizza}} @actionOk={{action "addToPizza"}} @actionCancel={{action "removeFromPizza"}} @classOk="add button" @classCancel="remove button" @textOk="Add to pizza" @textCancel="Remove from pizza" @isAddButton={{this.isAddButton}} />
   {{else}}
     {{#link-to "kitchen" class="button"}}Start Cooking{{/link-to}}
   {{/if}}
