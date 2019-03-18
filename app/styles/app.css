@@ -4,7 +4,6 @@ body {
 .mainTitle {
 	font-size: 36px;
 	text-align: center;
-	display: none;
 }
 .imgBox img {
 	width: 200px;
@@ -79,10 +78,13 @@ body {
 }
 .button:hover {
 	background-color: #8d9fed;
-	color: black;
+	color: #000a5f;
 }
 .button:focus {
 	outline: none;
+}
+.buttonLink {
+	text-align: center;
 }
 .addBlock {
 	text-align: center;
@@ -116,4 +118,45 @@ body {
 	bottom: 0;
 	right: 0;
 	background-color: rgba(0,0,0,0.7);
+}
+body {
+	margin: 0;
+}
+a {
+	text-decoration: none;
+}
+a:focus {
+	border: none;
+	outline: none;
+}
+.menu {
+	background-color: #d17e12;
+	padding: 0.1px;
+}
+.container {
+	margin: 0px 20px;
+}
+.mainLink {
+	margin: 10px 0;
+	display: inline-block;
+}
+.link {
+	color: #d9ddfc;
+}
+.link:hover {
+	color: #000a5f;
+}
+.nav {
+	display: inline-block;
+	margin-left: 20px;
+}
+.menuItem {
+	margin-right: 10px;
+	font-size: 18px;
+}
+.linkHere {
+	color: #e70101;
+}
+.linkHere:hover {
+	color: #810a0a;
 }

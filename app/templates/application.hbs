@@ -1,18 +1,22 @@
 <div class="header">
   <div class="menu">
-    {{#link-to "index"}}
-      <h1>Pizza</h1>
-    {{/link-to}}
-    <div class="links">
-      {{#link-to "kitchen" class="menuItem"}}
-        Kitchen
+    <div class="container">
+      {{#link-to "index" class="link"}}
+        <h1 class="mainLink">Pizza</h1>
       {{/link-to}}
-      {{#link-to "ingredients" class="menuItem"}}
-        Ingredients
-      {{/link-to}}
+      <div class="nav">
+        {{#link-to "kitchen" class="link menuItem"}}
+          Kitchen
+        {{/link-to}}
+        {{#link-to "ingredients" class="link menuItem"}}
+          Ingredients
+        {{/link-to}}
+      </div>
     </div>
   </div>
   <div class="body">
-    {{outlet}}
+    <div class="container">
+      {{outlet}}
+    </div>
   </div>
 </div>

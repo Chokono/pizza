@@ -3,7 +3,7 @@
   <p><strong>Size:</strong> {{pizza.size}}</p>
   <p><strong>Stuffing:</strong> {{pizza.stuffing}}</p>
   <p><strong>Topping:</strong> {{pizza.topping}}</p>
-  <p>If you want change composition of your pizza, you can see ingredients {{#link-to "ingredients"}}here!{{/link-to}}</p>
+  <p>If you want change composition of your pizza, you can see ingredients <strong>{{#link-to "ingredients" class="linkHere"}}here!{{/link-to}}</strong></p>
   <button class="button" onClick={{action "resetPizzaParams"}}>Pizza Complete</button>
 {{else}}
   <h3>Create new pizza</h3>
