@@ -9,8 +9,7 @@ export default Controller.extend({
       if (this.model.product.category === 'size') {
         if (this.model.pizzas.objectAt(0) !== this.model.product.name) {
           this.model.pizzas.objectAt(0).set(this.model.product.category, this.model.product.name);
-          this.model.pizzas.objectAt(0).set('price', calculateParams({pizza:this.model.pizzas.objectAt(0), products: this.model.products.objectAt(0), param: 'price'}));
-          this.model.pizzas.objectAt(0).set('calories', calculateParams({pizza:this.model.pizzas.objectAt(0), products: this.model.products.objectAt(0), param: 'calories'}));
+          calculateParams({pizza:this.model.pizzas.objectAt(0), products: this.model.products.objectAt(0)});
         }
       } else {
         if(this.model.pizzas.objectAt(0)[this.model.product.category].split(', ').length === 5) {
@@ -18,8 +17,7 @@ export default Controller.extend({
           return;
         }
         this.model.pizzas.objectAt(0).set(this.model.product.category, `${this.model.pizzas.objectAt(0)[this.model.product.category]}, ${this.model.product.name}`);
-        this.model.pizzas.objectAt(0).set('price', calculateParams({pizza:this.model.pizzas.objectAt(0), products: this.model.products.objectAt(0), param: 'price'}));
-        this.model.pizzas.objectAt(0).set('calories', calculateParams({pizza:this.model.pizzas.objectAt(0), products: this.model.products.objectAt(0), param: 'calories'}));
+        calculateParams({pizza:this.model.pizzas.objectAt(0), products: this.model.products.objectAt(0)});
       }
     },
     removeFromPizza() {
@@ -29,8 +27,7 @@ export default Controller.extend({
         return;
       }
       this.model.pizzas.objectAt(0).set(this.model.product.category, arr.filter(el=>(el !== this.model.product.name)).join(', '));
-      this.model.pizzas.objectAt(0).set('price', calculateParams({pizza:this.model.pizzas.objectAt(0), products: this.model.products.objectAt(0), param: 'price'}));
-      this.model.pizzas.objectAt(0).set('calories', calculateParams({pizza:this.model.pizzas.objectAt(0), products: this.model.products.objectAt(0), param: 'calories'}));
+      calculateParams({pizza:this.model.pizzas.objectAt(0), products: this.model.products.objectAt(0)});
     },
     closeError () {
       this.set('error', '');

@@ -33,8 +33,7 @@ export default Component.extend({
     toggleRadioInput (e) {
       if(this.pizza.size !== e.target.value) {
         this.pizza.set('size', e.target.value);
-        this.pizza.set('price', calculateParams({pizza:this.pizza, products: this.products, param: 'price'}));
-        this.pizza.set('calories', calculateParams({pizza:this.pizza, products: this.products, param: 'calories'}));
+        calculateParams({pizza:this.pizza, products: this.products});
       }
     },
     toggleCheckboxInput (e) {
@@ -56,8 +55,7 @@ export default Component.extend({
           this.pizza.set(e.target.getAttribute('name'), value.filter(el=>(el !== e.target.value)).join(', '));
         }
       }
-      this.pizza.set('price', calculateParams({pizza:this.pizza, products: this.products, param: 'price'}));
-      this.pizza.set('calories', calculateParams({pizza:this.pizza, products: this.products, param: 'calories'}));
+      calculateParams({pizza:this.pizza, products: this.products});
     },
     closeError () {
       this.set('error', '');

@@ -1,16 +1,19 @@
 import { helper } from '@ember/component/helper';
 
-export function calculateParams({pizza, products, param}) {
+export function calculateParams({pizza, products}) {
   let categories = ['size', 'stuffing', 'topping'];
-  let result = 0;
+  let price = 0;
+  let calories = 0;
   categories.forEach(cat=>{
     pizza[cat].split(', ').forEach(calculationProduct=>{
       if(calculationProduct) {
-        result += products[cat].find(product=>(product.name === calculationProduct))[param];
+        price += products[cat].find(product=>(product.name === calculationProduct)).price;
+        calories += products[cat].find(product=>(product.name === calculationProduct)).calories;
       }
     });
-  })
-  return result;
+  });
+  pizza.set('price', price);
+  pizza.set('calories', calories);
 }
 
 export default helper(calculateParams);
