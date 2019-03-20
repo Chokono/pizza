@@ -1,9 +1,27 @@
+@font-face {
+	font-family: "Gotham Pro Regular";
+	src: url(/assets/Gotham_Font/Gotham-Pro-Medium-Regular.otf) format("opentype");
+}
+@font-face {
+	font-family: "Gotham Pro Bold";
+	src: url(/assets/Gotham_Font/Gotham-Pro-Bold.otf) format("opentype");
+}
+@font-face {
+	font-family: "Gotham Pro Light";
+	src: url(/assets/Gotham_Font/Gotham-Pro-Light-Regular.otf) format("opentype");
+}
+@font-face {
+	font-family: "Gotham Book";
+	src: url(/assets/Gotham_Font/Gotham-Book.otf) format("opentype");
+}
 body {
+	font-family: "Gotham Pro Regular";
 	color: #414141;
 }
 .mainTitle {
 	font-size: 36px;
 	text-align: center;
+	font-family: "Gotham Book";
 }
 .imgBox img {
 	width: 200px;
@@ -159,4 +177,102 @@ a:focus {
 }
 .linkHere:hover {
 	color: #810a0a;
+}
+.mainHeaderImages {
+	float: left;
+	width: 50%;
+	margin-bottom: -4px;
+	position: relative;
+}
+.mainHeaderImages img {
+	width: 100%;
+}
+.firstImage {
+	background-color: blue;
+}
+.secondImage {
+	background-color: red;
+}
+.thirdImage {
+	background-color: yellow;
+}
+.fullAbsolut {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	overflow: hidden;
+	opacity: 0;
+}
+.offerImg {
+	width: 100%;
+}
+.table {
+	display: table;
+}
+.tr {
+	display: table-row;
+}
+.td {
+	display: table-cell;
+	padding: 10px;
+	box-sizing: border-box;
+}
+.buyTd:first-child {
+	width: 30%;
+	text-align: right;
+}
+.buyTd:last-child {
+	width: 70%;
+	text-align: left;
+}
+.buyTr {
+	border-bottom: 1px solid #ccc;
+}
+.buyTr:hover {
+	background-color: #ccc;
+}
+.inline {
+	display: inline-block;
+}
+.offer {
+	text-align: center;
+}
+.sectionTitle {
+	text-align: left;
+	font-weight: bold;
+	font-family: "Gotham Book";
+}
+.offerBlock {
+	width: 33.33%;
+	float: left;
+}
+.offerBlockInner {
+	width: 100%;
+	max-width: 420px;
+	box-sizing: border-box;
+	padding: 0 10px;
+	margin: 0 auto;
+}
+strong {
+	font-weight: normal;
+	font-family: "Gotham Pro Bold";
+}
+.textBottom {
+	display: block;
+	position: absolute;
+	left: 20px;
+	right: 20px;
+	bottom: 20px;
+	text-align: left;
+	font-size: 14px;
+}
+@media (max-width:700px) {
+	.mainHeaderImages, .offerBlock {
+		width: 100%;
+	}
+	.offerBlockInner {
+		padding: 0;
+	}
 }

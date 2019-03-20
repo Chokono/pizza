@@ -1,5 +1,6 @@
-{{outlet}}
-
+<div class="container">
+  {{outlet}}
+</div>
 <footer>
   {{#let (get this.model "lastObject") as |pizza|}}
     {{#if (get pizza "exist")}}
