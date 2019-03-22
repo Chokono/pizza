@@ -183,18 +183,22 @@ a:focus {
 	width: 50%;
 	margin-bottom: -4px;
 	position: relative;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	opacity: 1;
 }
 .mainHeaderImages img {
 	width: 100%;
 }
 .firstImage {
-	background-color: blue;
+	background-image: url('/assets/images/pizzeria.jpg');
 }
 .secondImage {
-	background-color: red;
+	background-image:  url('/assets/images/problems.jpeg');
 }
 .thirdImage {
-	background-color: yellow;
+	background-image:  url('/assets/images/hand_shake.jpg');
 }
 .fullAbsolut {
 	position: absolute;
@@ -203,7 +207,6 @@ a:focus {
 	top: 0;
 	bottom: 0;
 	overflow: hidden;
-	opacity: 0;
 }
 .offerImg {
 	width: 100%;
@@ -243,6 +246,7 @@ a:focus {
 	text-align: left;
 	font-weight: bold;
 	font-family: "Gotham Book";
+	font-size: 36px;
 }
 .offerBlock {
 	width: 33.33%;
@@ -266,7 +270,14 @@ strong {
 	right: 20px;
 	bottom: 20px;
 	text-align: left;
-	font-size: 14px;
+	font-size: 28px;
+	color: white;
+}
+.descriptionProgramm {
+	padding: 50px 0;
+}
+.offer {
+	background-color: #efefef;
 }
 @media (max-width:700px) {
 	.mainHeaderImages, .offerBlock {
