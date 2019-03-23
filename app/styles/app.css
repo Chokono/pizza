@@ -16,7 +16,7 @@
 }
 body {
 	font-family: "Gotham Pro Regular";
-	color: #414141;
+	color: black;
 }
 .mainTitle {
 	font-size: 36px;
@@ -147,8 +147,10 @@ a:focus {
 	border: none;
 	outline: none;
 }
-.menu {
+.themeBackground {
 	background-color: #d17e12;
+}
+.menu {
 	padding: 0.1px;
 }
 .container {
@@ -186,6 +188,10 @@ a:focus {
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
+	opacity: 0;
+	transition: 0.5s;
+}
+.visible .firstImage {
 	opacity: 1;
 }
 .mainHeaderImages img {
@@ -213,6 +219,7 @@ a:focus {
 }
 .table {
 	display: table;
+	width: 100%;
 }
 .tr {
 	display: table-row;
@@ -223,11 +230,11 @@ a:focus {
 	box-sizing: border-box;
 }
 .buyTd:first-child {
-	width: 30%;
+	width: 50%;
 	text-align: right;
 }
 .buyTd:last-child {
-	width: 70%;
+	width: 50%;
 	text-align: left;
 }
 .buyTr {
@@ -247,6 +254,15 @@ a:focus {
 	font-weight: bold;
 	font-family: "Gotham Book";
 	font-size: 36px;
+}
+.smallBlockTitle {
+	font-weight: bold;
+	font-family: "Gotham Book";
+	font-size: 26px;
+}
+.smallBlockDescription {
+	font-size: 16px;
+	line-height: 24px;
 }
 .offerBlock {
 	width: 33.33%;
@@ -275,6 +291,16 @@ strong {
 }
 .descriptionProgramm {
 	padding: 50px 0;
+	position: relative;
+	overflow: hidden;
+}
+.buy {
+	background-image: url('/assets/images/buy.jpg');
+	background-position: center;
+	background-size: cover;
+	-webkit-filter: blur(10px);
+	filter: blur(10px);
+	z-index: -1;
 }
 .offer {
 	background-color: #efefef;
