@@ -189,22 +189,28 @@ a:focus {
 	background-position: center;
 	background-repeat: no-repeat;
 	opacity: 0;
-	transition: 0.5s;
+	transition: 1s;
 }
-.visible .firstImage {
+.visible .mainHeaderImages {
 	opacity: 1;
+	transform: translateX(0);
 }
 .mainHeaderImages img {
 	width: 100%;
 }
 .firstImage {
 	background-image: url('/assets/images/pizzeria.jpg');
+	transform: translateX(-50%);
 }
 .secondImage {
 	background-image:  url('/assets/images/problems.jpeg');
+	transform: translateX(50%);
+	transition-delay: 1.5s;
 }
 .thirdImage {
 	background-image:  url('/assets/images/hand_shake.jpg');
+	transform: translateX(50%);
+	transition-delay: 3s;
 }
 .fullAbsolut {
 	position: absolute;
@@ -219,7 +225,6 @@ a:focus {
 }
 .table {
 	display: table;
-	width: 100%;
 }
 .tr {
 	display: table-row;
@@ -228,6 +233,11 @@ a:focus {
 	display: table-cell;
 	padding: 10px;
 	box-sizing: border-box;
+}
+.buyTable {
+	margin: 0 auto;
+	background-color: rgba(255, 255, 255, 0.5);
+	border-radius: 10px;
 }
 .buyTd:first-child {
 	width: 50%;
@@ -239,9 +249,6 @@ a:focus {
 }
 .buyTr {
 	border-bottom: 1px solid #ccc;
-}
-.buyTr:hover {
-	background-color: #ccc;
 }
 .inline {
 	display: inline-block;
@@ -267,6 +274,18 @@ a:focus {
 .offerBlock {
 	width: 33.33%;
 	float: left;
+	transition: 1s;
+	opacity: 0;
+}
+.firstOfferBlock {
+	transform: translateX(-50%);
+}
+.lastOfferBlock {
+	transform: translateX(50%);
+}
+.visible .offerBlock {
+	opacity: 1;
+	transform: translateX(0);
 }
 .offerBlockInner {
 	width: 100%;
