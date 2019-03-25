@@ -93,6 +93,8 @@ body {
 	margin: 10px;
 	background-color: #0e2cad;
 	color: white;
+	border: 1px solid white;
+	line-height: 28px;
 }
 .button:hover {
 	background-color: #8d9fed;
@@ -323,6 +325,12 @@ strong {
 }
 .offer {
 	background-color: #efefef;
+}
+.demo {
+	text-align: center;
+}
+.white {
+	color: white;
 }
 @media (max-width:700px) {
 	.mainHeaderImages, .offerBlock {

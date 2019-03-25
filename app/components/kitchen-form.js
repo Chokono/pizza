@@ -3,7 +3,6 @@ import { calculateParams } from 'ember-hamburher/helpers/calculate-params';
 
 export default Component.extend({
   didRender() {
-    console.log('header');
 this._super(...arguments);
 },
   tagName: 'form',
