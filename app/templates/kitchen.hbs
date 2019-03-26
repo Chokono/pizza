@@ -1,24 +1,22 @@
-<div class="kitchen">
-  {{#let (get this.model.pizzas "lastObject") (get this.model.products "firstObject") as |pizza products|}}
-    <div class="fullHeight">
-      <div class="container">
-        <h1 class="mainTitle">Velcome to kitchen</h1>
-        <KitchenForm @categories={{this.model.categories}} @pizzas={{this.model.pizzas}} @pizza={{pizza}}
-          @products={{products}} />
-      </div>
-    </div>
-    <footer class="footer themeBackground">
-      <div class="container">
-        <div class="right">
-          <p>
-            <strong>Price:</strong> 
-            <span class="white">{{pizza.price}}$</span> 
-            <strong>Calories:</strong> 
-            <span class="white">{{pizza.calories}}kcal</span>
-          </p>
-        </div>
-        <div class="clear"></div>
-      </div>
-    </footer>
-  {{/let}}
+{{#let (get this.model.pizzas "lastObject") (get this.model.products "firstObject") as |pizza products|}}
+<div class="kitchen fullHeight">
+  <div class="container">
+    <h1 class="mainTitle">Velcome to kitchen</h1>
+    <KitchenForm @categories={{this.model.categories}} @pizzas={{this.model.pizzas}} @pizza={{pizza}}
+      @products={{products}} />
+  </div>
 </div>
+<footer class="footer themeBackground">
+  <div class="container">
+    <div class="right">
+      <p>
+        <strong>Price:</strong>
+        <span class="white">{{pizza.price}}$</span>
+        <strong>Calories:</strong>
+        <span class="white">{{pizza.calories}}kcal</span>
+      </p>
+    </div>
+    <div class="clear"></div>
+  </div>
+</footer>
+{{/let}}
