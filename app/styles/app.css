@@ -1,342 +1,397 @@
 @font-face {
-	font-family: "Gotham Pro Regular";
-	src: url(/assets/Gotham_Font/Gotham-Pro-Medium-Regular.otf) format("opentype");
+  font-family: "Gotham Pro Regular";
+  src: url(/assets/Gotham_Font/Gotham-Pro-Medium-Regular.otf) format("opentype");
 }
 @font-face {
-	font-family: "Gotham Pro Bold";
-	src: url(/assets/Gotham_Font/Gotham-Pro-Bold.otf) format("opentype");
+  font-family: "Gotham Pro Bold";
+  src: url(/assets/Gotham_Font/Gotham-Pro-Bold.otf) format("opentype");
 }
 @font-face {
-	font-family: "Gotham Pro Light";
-	src: url(/assets/Gotham_Font/Gotham-Pro-Light-Regular.otf) format("opentype");
+  font-family: "Gotham Pro Light";
+  src: url(/assets/Gotham_Font/Gotham-Pro-Light-Regular.otf) format("opentype");
 }
 @font-face {
-	font-family: "Gotham Book";
-	src: url(/assets/Gotham_Font/Gotham-Book.otf) format("opentype");
+  font-family: "Gotham Book";
+  src: url(/assets/Gotham_Font/Gotham-Book.otf) format("opentype");
 }
 body {
-	font-family: "Gotham Pro Regular";
-	color: black;
+  font-family: "Gotham Pro Regular";
+  color: black;
 }
 .mainTitle {
-	font-size: 36px;
-	text-align: center;
-	font-family: "Gotham Book";
+  font-size: 36px;
+  text-align: center;
+  font-family: "Gotham Book";
 }
 .imgBox img {
-	width: 200px;
-	float: left;
+  width: 200px;
+  float: left;
 }
 .descriptionBox {
-	width: calc(100% - 200px);
-	float: left;
+  width: calc(100% - 200px);
+  float: left;
 }
 .itemMain {
-	float: left;
-	width: 30%;
-	box-sizing: border-box;
-	padding-left: 20px;
+  float: left;
+  width: 30%;
+  box-sizing: border-box;
+  padding-left: 20px;
 }
 .itemDescription {
-	float: left;
-	width: 70%;
-	box-sizing: border-box;
-	padding-left: 20px;
+  float: left;
+  width: 70%;
+  box-sizing: border-box;
+  padding-left: 20px;
 }
 .itemName {
-	text-transform: capitalize;
-	font-size: 20px;
-	font-weight: bold;
-	margin: 0 0 10px;
+  text-transform: capitalize;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0 0 10px;
 }
 .itemInfo {
-	font-size: 18px;
-	line-height: 22px;
-	margin: 5px 0;
+  font-size: 18px;
+  line-height: 22px;
+  margin: 5px 0;
 }
 .itemInfo span {
-	font-size: 20px;
-	color: #4d4906;
+  font-size: 20px;
+  color: #4d4906;
 }
 .clear {
-	clear: both;
+  clear: both;
 }
 .itemH3 {
-	font-size: 50px;
-	text-transform: capitalize;
+  font-size: 50px;
+  text-transform: capitalize;
 }
 .listContainer {
-	text-align: center;
+  text-align: center;
 }
 .listContainer .ember-view {
-	display: inline-block;
-	width: 20%;
-	min-width: 150px;
-	box-sizing: border-box;
-	padding: 0 10px;
-	margin: 10px 0;
+  display: inline-block;
+  width: 20%;
+  min-width: 150px;
+  box-sizing: border-box;
+  padding: 0 10px;
+  margin: 10px 0;
 }
 .listContainer img {
-	width: 100%;
+  width: 100%;
 }
 .productH3 {
-	text-align: center;
-	font-size: 36px;
+  text-align: center;
+  font-size: 36px;
 }
 .button {
-	display: inline-block;
-	width: 250px;
-	padding: 10px 0;
-	cursor: pointer;
-	box-shadow: 2px 2px 5px 0 black;
-	font-size: 20px;
-	margin: 10px;
-	background-color: #0e2cad;
-	color: white;
-	border: 1px solid white;
-	line-height: 28px;
+  display: inline-block;
+  width: 250px;
+  padding: 10px 0;
+  cursor: pointer;
+  box-shadow: 2px 2px 5px 0 black;
+  font-size: 20px;
+  margin: 10px;
+  background-color: #0e2cad;
+  color: white;
+  border: 1px solid white;
+  line-height: 28px;
 }
 .button:hover {
-	background-color: #8d9fed;
-	color: #000a5f;
+  background-color: #8d9fed;
+  color: #000a5f;
 }
 .button:focus {
-	outline: none;
+  outline: none;
 }
 .buttonLink {
-	text-align: center;
+  text-align: center;
 }
 .addBlock {
-	text-align: center;
-	margin-top: 100px;
+  text-align: center;
+  margin-top: 100px;
 }
 .remove {
-	background-color: #8f0808;
+  background-color: #8f0808;
 }
 .remove:hover {
-	background-color: #cf322c;
+  background-color: #cf322c;
 }
-.radioLabel, .radio {
-	cursor: pointer;
+.radioLabel,
+.radio {
+  cursor: pointer;
 }
 .modal {
-	position: fixed;
-	top: 30%;
-	left: 50%;
-	transform: translate(-50%, -30%);
-	padding: 30px;
-	max-width: 300px;
-	z-index: 101;
-	background-color: white;
-
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -30%);
+  padding: 30px;
+  max-width: 300px;
+  z-index: 101;
+  background-color: white;
 }
 .overlay {
-	position: fixed;
-	z-index: 100;
-	top: 0;
-	left:0;
-	bottom: 0;
-	right: 0;
-	background-color: rgba(0,0,0,0.7);
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7);
 }
 body {
-	margin: 0;
+  margin: 0;
 }
 a {
-	text-decoration: none;
+  text-decoration: none;
 }
 a:focus {
-	border: none;
-	outline: none;
+  border: none;
+  outline: none;
 }
 .themeBackground {
-	background-color: #d17e12;
+  background-color: #d17e12;
 }
 .menu {
-	padding: 0.1px;
+  padding: 0.1px;
+  min-height: 55px;
+  box-sizing: border-box;
 }
 .container {
-	margin: 0px 20px;
+  margin: 0px 20px;
 }
 .mainLink {
-	margin: 10px 0;
-	display: inline-block;
+  margin: 10px 0;
+  display: inline-block;
 }
 .link {
-	color: #d9ddfc;
+  color: #d9ddfc;
 }
 .link:hover {
-	color: #000a5f;
+  color: #000a5f;
 }
 .nav {
-	display: inline-block;
-	margin-left: 20px;
+  display: inline-block;
+  margin-left: 20px;
 }
 .menuItem {
-	margin-right: 10px;
-	font-size: 18px;
+  margin-right: 10px;
+  font-size: 18px;
 }
 .linkHere {
-	color: #e70101;
+  color: #e70101;
 }
 .linkHere:hover {
-	color: #810a0a;
+  color: #810a0a;
 }
 .mainHeaderImages {
-	float: left;
-	width: 50%;
-	margin-bottom: -4px;
-	position: relative;
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
-	opacity: 0;
-	transition: 1s;
+  float: left;
+  width: 50%;
+  margin-bottom: -4px;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: 1s;
 }
 .visible .mainHeaderImages {
-	opacity: 1;
-	transform: translateX(0);
+  opacity: 1;
+  transform: translateX(0);
 }
 .mainHeaderImages img {
-	width: 100%;
+  width: 100%;
 }
 .firstImage {
-	background-image: url('/assets/images/pizzeria.jpg');
-	transform: translateX(-50%);
+  background-image: url("/assets/images/pizzeria.jpg");
+  transform: translateX(-50%);
 }
 .secondImage {
-	background-image:  url('/assets/images/problems.jpeg');
-	transform: translateX(50%);
-	transition-delay: 1.5s;
+  background-image: url("/assets/images/problems.jpeg");
+  transform: translateX(50%);
+  transition-delay: 1.5s;
 }
 .thirdImage {
-	background-image:  url('/assets/images/hand_shake.jpg');
-	transform: translateX(50%);
-	transition-delay: 3s;
+  background-image: url("/assets/images/hand_shake.jpg");
+  transform: translateX(50%);
+  transition-delay: 3s;
 }
 .fullAbsolut {
-	position: absolute;
-	left: 0;
-	right: 0;
-	top: 0;
-	bottom: 0;
-	overflow: hidden;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  overflow: hidden;
 }
 .offerImg {
-	width: 100%;
+  width: 100%;
 }
 .table {
-	display: table;
+  display: table;
 }
 .tr {
-	display: table-row;
+  display: table-row;
 }
 .td {
-	display: table-cell;
-	padding: 10px;
-	box-sizing: border-box;
+  display: table-cell;
+  padding: 10px;
+  box-sizing: border-box;
 }
 .buyTable {
-	margin: 0 auto;
-	background-color: rgba(255, 255, 255, 0.5);
-	border-radius: 10px;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
 }
 .buyTd:first-child {
-	width: 50%;
-	text-align: right;
+  width: 50%;
+  text-align: right;
 }
 .buyTd:last-child {
-	width: 50%;
-	text-align: left;
+  width: 50%;
+  text-align: left;
 }
 .buyTr {
-	border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
 }
 .inline {
-	display: inline-block;
+  display: inline-block;
 }
 .offer {
-	text-align: center;
+  text-align: center;
 }
 .sectionTitle {
-	text-align: left;
-	font-weight: bold;
-	font-family: "Gotham Book";
-	font-size: 36px;
+  text-align: left;
+  font-weight: bold;
+  font-family: "Gotham Book";
+  font-size: 36px;
 }
 .smallBlockTitle {
-	font-weight: bold;
-	font-family: "Gotham Book";
-	font-size: 26px;
+  font-weight: bold;
+  font-family: "Gotham Book";
+  font-size: 26px;
 }
 .smallBlockDescription {
-	font-size: 16px;
-	line-height: 24px;
+  font-size: 16px;
+  line-height: 24px;
 }
 .offerBlock {
-	width: 33.33%;
-	float: left;
-	transition: 1s;
-	opacity: 0;
+  width: 33.33%;
+  float: left;
+  transition: 1s;
+  opacity: 0;
 }
 .firstOfferBlock {
-	transform: translateX(-50%);
+  transform: translateX(-50%);
 }
 .lastOfferBlock {
-	transform: translateX(50%);
+  transform: translateX(50%);
 }
 .visible .offerBlock {
-	opacity: 1;
-	transform: translateX(0);
+  opacity: 1;
+  transform: translateX(0);
 }
 .offerBlockInner {
-	width: 100%;
-	max-width: 420px;
-	box-sizing: border-box;
-	padding: 0 10px;
-	margin: 0 auto;
+  width: 100%;
+  max-width: 420px;
+  box-sizing: border-box;
+  padding: 0 10px;
+  margin: 0 auto;
 }
 strong {
-	font-weight: normal;
-	font-family: "Gotham Pro Bold";
+  font-weight: normal;
+  font-family: "Gotham Pro Bold";
 }
 .textBottom {
-	display: block;
-	position: absolute;
-	left: 20px;
-	right: 20px;
-	bottom: 20px;
-	text-align: left;
-	font-size: 28px;
-	color: white;
+  display: block;
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  text-align: left;
+  font-size: 28px;
+  color: white;
 }
 .descriptionProgramm {
-	padding: 50px 0;
-	position: relative;
-	overflow: hidden;
+  padding: 50px 0;
+  position: relative;
+  overflow: hidden;
 }
 .buy {
-	background-image: url('/assets/images/buy.jpg');
-	background-position: center;
-	background-size: cover;
-	-webkit-filter: blur(10px);
-	filter: blur(10px);
-	z-index: -1;
+  background-image: url("/assets/images/buy.jpg");
+  background-position: center;
+  background-size: cover;
+  -webkit-filter: blur(10px);
+  filter: blur(10px);
+  z-index: -1;
 }
 .offer {
-	background-color: #efefef;
+  background-color: #efefef;
 }
 .demo {
-	text-align: center;
+  text-align: center;
 }
 .white {
-	color: white;
+  color: white;
 }
-@media (max-width:700px) {
-	.mainHeaderImages, .offerBlock {
-		width: 100%;
-	}
-	.offerBlockInner {
-		padding: 0;
-	}
+.footer {
+  padding: 10px 0px;
+}
+.right {
+  float: right;
+}
+.kitchen {
+  padding: 0.1px 0;
+  min-height: calc(100vh - 55px);
+  position: relative;
+  background: url(/assets/images/kitchen.jpg) center no-repeat;
+  background-size: cover;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -moz-box-orient: vertical;
+  -moz-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+.fullHeight {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -moz-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -moz-box-orient: vertical;
+  -moz-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+.center {
+	text-align: center;
+}
+@media (max-width: 700px) {
+  .mainHeaderImages,
+  .offerBlock {
+    width: 100%;
+  }
+  .offerBlockInner {
+    padding: 0;
+  }
 }

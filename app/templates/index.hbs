@@ -1,12 +1,4 @@
 <Header />
-<section class="descriptionProgramm demo themeBackground">
-  <div class="container">
-    <h2 class="sectionTitle white">Watch demo version:</h2>
-    {{#link-to "kitchen" class="button"}}
-      Demo
-    {{/link-to}}
-  </div>
-</section>
 <section class="descriptionProgramm offer" id="offer">
   <div class="container">
     <h2 class="sectionTitle">We offer:</h2>
@@ -59,8 +51,16 @@
       </div>
       <div class="tr">
         <div class="td buyTd">GitHub:</div>
-        <div class="td buyTd"><a href="https://github.com/Chokono/" target="_blank">https://github.com/Chokono/</a></div>
+        <div class="td buyTd"><a href="https://github.com/Chokono/" rel="noopener" target="_blank">https://github.com/Chokono/</a></div>
       </div>
     </div>
+  </div>
+</section>
+<section class="descriptionProgramm demo themeBackground">
+  <div class="container">
+    <h2 class="sectionTitle white">Watch demo version:</h2>
+    {{#link-to "kitchen" class="button"}}
+      Demo
+    {{/link-to}}
   </div>
 </section>
