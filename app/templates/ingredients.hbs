@@ -1,17 +1,31 @@
-<div class="container">
+<div class="container fullHeight">
   {{outlet}}
 </div>
-<footer>
   {{#let (get this.model "lastObject") as |pizza|}}
     {{#if (get pizza "exist")}}
-      <div class="pizzaContains">
-        <p>Pizza is cooked.</p>
-        <p>Size: {{get pizza "size"}}</p>
-        <p>Stuffing: {{get pizza "stuffing"}}</p>
-        <p>Topping: {{get pizza "topping"}}</p>
-        <p>Price: {{get pizza "price"}}$</p>
-        <p>Calories: {{get pizza "calories"}}kcal</p>
-      </div>
+      <footer class="footer themeBackground">
+        <div class="container">
+          <p class="footerComporison">
+            <span class="white addittionslText">Size:</span> 
+            <strong>{{get pizza "size"}}</strong>
+          </p>
+          <p class="footerComporison">
+            <span class="white addittionslText">Stuffing:</span> 
+            <strong>{{get pizza "stuffing"}}</strong>
+          </p>
+          <p class="footerComporison">
+            <span class="white addittionslText">Topping:</span> 
+            <strong>{{get pizza "topping"}}</strong>
+          </p>
+          <div class="right">
+            <p>
+              <strong>Price:</strong>
+              <span class="white addittionslText">{{get pizza "price"}}$</span>
+              <strong>Calories:</strong>
+              <span class="white addittionslText">{{get pizza "calories"}}kcal</span>
+            </p>
+          </div>
+        </div>
+      </footer>
     {{/if}}
   {{/let}}
-</footer>

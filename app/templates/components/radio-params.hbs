@@ -1,17 +1,16 @@
 <div>
-  <p>{{category.name}}:
-  </p>
+  <p class="labelGroupe">{{category.name}}:</p>
   {{#each category.items as |product|}}
-  {{#if (equal category.name "size")}}
-  <input type="radio" checked={{equal pizza.size product.name}} name={{category.name}} class="radio"
-    price={{product.price}} id={{product.id}} calories={{product.calories}} value={{product.name}}
-    onClick={{toggleRadioInput}}>
-  <label class="radioLabel" for={{product.id}}>{{product.name}}</label>
-  {{else}}
-  <input type="checkbox" name={{category.name}} class="checkbox" price={{product.price}} calories={{product.calories}}
-    id={{product.id}} value={{product.name}} onClick={{toggleCheckboxInput}}
-    checked={{is-in-array (get pizza category.name) product.name}}>
-  <label class="checkboxLabel" for={{product.id}}>{{product.name}}</label>
-  {{/if}}
+    {{#if (equal category.name "size")}}
+      <input type="radio" checked={{equal pizza.size product.name}} name={{category.name}} class="radio"
+        price={{product.price}} id={{product.id}} calories={{product.calories}} value={{product.name}}
+        onClick={{toggleRadioInput}}>
+      <label class="radioLabel" for={{product.id}}>{{product.name}}</label>
+    {{else}}
+      <input type="checkbox" name={{category.name}} class="checkbox" price={{product.price}} calories={{product.calories}}
+        id={{product.id}} value={{product.name}} onClick={{toggleCheckboxInput}}
+        checked={{is-in-array (get pizza category.name) product.name}}>
+      <label class="checkboxLabel" for={{product.id}}>{{product.name}}</label>
+    {{/if}}
   {{/each}}
 </div>
